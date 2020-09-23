@@ -11,11 +11,9 @@ baseline.ipynb - Ноутбук с бейзлайном задачи.
 В качестве метрик качества мы используем следующие:
 * CER - mean character error rate 
 
-\begin{equation}
-
+```math
 \text{CER} = \frac{\sum\limits_{i=1}^n \text{dist}_c (\text{pred}_i,\text{true}_i)}{\sum\limits_{i=1}^n \text{len} (\text{true}_i)}
-
-\end{equation}
+```
 
 * WER - mean word error rate (среднее по test-выборке строк);
 * Sentence Accuracy - число полностью совпавших строк в test / общее число строк в test.
