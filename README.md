@@ -12,7 +12,9 @@ baseline.ipynb - Ноутбук с бейзлайном задачи.
 * CER - mean character error rate 
 
 \begin{equation}
+
 \text{CER} = \frac{\sum\limits_{i=1}^n \text{dist}_c (\text{pred}_i,\text{true}_i)}{\sum\limits_{i=1}^n \text{len} (\text{true}_i)}
+
 \end{equation}
 
 * WER - mean word error rate (среднее по test-выборке строк);
