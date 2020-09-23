@@ -11,15 +11,17 @@ baseline.ipynb - Ноутбук с бейзлайном задачи.
 В качестве метрик качества мы используем следующие:
 * CER - mean character error rate 
 
-```math
-\begin{equation}
-\text{CER} = \frac{\sum\limits_{i=1}^n \text{dist}_c (\text{pred}_i,\text{true}_i)}{\sum\limits_{i=1}^n \text{len} (\text{true}_i)}
-\end{equation}
-```
+![CER](cer.png)
 
-* WER - mean word error rate (среднее по test-выборке строк);
-* Sentence Accuracy - число полностью совпавших строк в test / общее число строк в test.
+* WER - mean word error rate
 
-Главная метрика, по которой сортируется лидерборд, - MCER (меньше - лучше). В случае совпадения MCER у двух или более участников, сортировка для них будет вестись по MWER (меньше - лучше). Если и MCER, и MWER совпадают, - смотрим на Sentence Accuracy (больше - лучше).
+![WER](wer.png)
+
+* Sentence Accuracy - число полностью совпавших строк в test разделить на общее число строк в test.
+
+В формулах для CER и WER dist - это расстояние Левенштейна. Только для CER токеном является символ (dist_c), а для WER токеном является слово (dist_w). Методику подсчета метрик можно изучить подробнее в скрипте evaluate.py. Он принимает на вход два параметра - pred.txt и true.txt. Это файлы со строками предсказаний и со строками реальных ответов соответственно.
+
+
+Главная метрика, по которой сортируется лидерборд, - CER (меньше - лучше). В случае совпадения CER у двух или более участников, сортировка для них будет вестись по WER (меньше - лучше). Если и CER, и WER совпадают, - смотрим на Sentence Accuracy (больше - лучше).
 
 Про метрики дополнительно можно прочитать вот здесь https://sites.google.com/site/textdigitisation/qualitymeasures/computingerrorrates.
