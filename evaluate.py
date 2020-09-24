@@ -1,21 +1,24 @@
 import sys
 import editdistance
 
+#Это скрипт который посчитает 3 метрики качества, по которым оценивается решение
 def evaluate():
+    #Аргументы - названия файлов с предсказаниями и правильными ответами.
+    #В true записаны построчно правильные ответы. В pred - соответствующие предсказания
     pred_path = sys.argv[1]
     true_path = sys.argv[2]
 
 
-    with open('pred.txt') as f:
+    with open(pred_path) as f:
         prediction = f.readlines()
     predictions = [x.rstrip('\n') for x in prediction] 
 
-    with open('true.txt') as f:
+    with open(true_path) as f:
         true_text = f.readlines()
 
     true_text = [x.rstrip('\n') for x in true_text] 
 
-
+    #По сути, мы в цикле пробегаемся по предсказаниям, считаем расстояние Левенштейна, а затем делим сумму расстояний на сумму длин всех правильных ответов
     def cer():
         numCharErr = 0
         numCharTotal = 0
@@ -28,6 +31,8 @@ def evaluate():
             numCharTotal += len(true)
         charErrorRate = numCharErr / numCharTotal
         return charErrorRate*100
+        
+    #Аналогичный подход, как и для CER. Только объектом является слово, а не символ. Соответственно в подсчете расстояния участвует два массива - pred и true, в массивах содержатся слова
     def wer():
         word_eds, word_true_lens = [], []
         for i in range(len(predictions)):
@@ -41,6 +46,8 @@ def evaluate():
     
         wordErrorRate = sum(word_eds) / sum(word_true_lens)
         return wordErrorRate*100
+        
+    #Наиболее простая метрика, которая считает количество полных совпадений предложений (pred и true) и делит его на общий размер теста
     def string_acc():
         numStringOK = 0
         numStringTotal = 0
@@ -57,10 +64,12 @@ def evaluate():
         return stringAccuracy*100
     
     
-    
+    #Вызов функций и подсчет метрик
     charErrorRate = cer()
     wordErrorRate = wer()
     stringAccuracy = string_acc()
+    
+    #Выведем построчно правильные ответы и предсказания
     print('Ground truth -> Recognized')
     for i in range(len(predictions)):
         pred = predictions[i]
