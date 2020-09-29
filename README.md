@@ -1,4 +1,4 @@
-# digital_peter_aij2020
+# AI Journey 2020 Digital Peter
 
 baseline.ipynb - Ноутбук с бейзлайном задачи.
 
