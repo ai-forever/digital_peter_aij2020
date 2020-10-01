@@ -27,7 +27,7 @@ baseline.ipynb - Ноутбук с бейзлайном задачи.
 * **Sentence Accuracy** - отношение количества полностью совпавших строк (учиитывая пробелы) к количеству строк в тестовой выборке.
 
 <p align="center">
-  <img src="pics/SentenceAccuracy.png" width="40%">
+  <img src="pics/SentenceAccuracy.png" width="60%">
 </p>
 
 
