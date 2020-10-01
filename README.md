@@ -36,7 +36,7 @@ baseline.ipynb
 * **CER** - Character Error Rate 
 
 <p align="center">
-  <img src="pics/CER.png" width="40%">
+  <img src="pics/CER.png" width="30%">
 </p>
 
 Здесь <img src="https://render.githubusercontent.com/render/math?math=\text{dist}_c"> - это расстояние Левенштейна, посчитанное для токенов-символов (включая пробел), <img src="https://render.githubusercontent.com/render/math?math=\text{len}_c"> - длина строки в символах.
@@ -44,7 +44,7 @@ baseline.ipynb
 * **WER** - Word Error Rate
 
 <p align="center">
-  <img src="pics/WER.png" width="40%">
+  <img src="pics/WER.png" width="30%">
 </p>
 
 Здесь <img src="https://render.githubusercontent.com/render/math?math=\text{dist}_w"> - это расстояние Левенштейна, посчитанное для токенов-слов, <img src="https://render.githubusercontent.com/render/math?math=\text{len}_w"> - длина строки в словах.
@@ -52,12 +52,12 @@ baseline.ipynb
 * **Sentence Accuracy** - отношение количества полностью совпавших строк (учитывая пробелы) к количеству строк в выборке.
 
 <p align="center">
-  <img src="pics/SentenceAccuracy.png" width="50%">
+  <img src="pics/SentenceAccuracy.png" width="40%">
 </p>
 
 В этой формуле используется скобка Айверсона:
 <p align="center">
-  <img src="pics/IversonBracket.png" width="25%">
+  <img src="pics/IversonBracket.png" width="20%">
 </p>
 
 В формулах выше <img src="https://render.githubusercontent.com/render/math?math=n"> - размер тестовой выборки, <img src="https://render.githubusercontent.com/render/math?math=\text{pred}_i"> - это строка из символов, которую распознала модель на <img src="https://render.githubusercontent.com/render/math?math=i">-ом изображении, а <img src="https://render.githubusercontent.com/render/math?math=\text{true}_i"> - это истинный перевод <img src="https://render.githubusercontent.com/render/math?math=i">-ого изображения, произведенный экспертом.
