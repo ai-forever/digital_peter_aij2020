@@ -1,28 +1,35 @@
 # AI Journey 2020 Digital Peter
 
+Соревнование по распознаванию автографы Петра I.
+
 baseline.ipynb - Ноутбук с бейзлайном задачи.
 
 Данные лежат вот [тут](https://drive.google.com/file/d/1kDmRCl692k6s9kQnNryq5ByAaHZX2uEw/view?usp=sharing).
 
 ### Краткое описание задачи и метрики
 
-Участникам предлагается построчно распознавать рукописный текст Петра 1.
+Участникам предлагается построчно распознавать рукописный текст Петра I.
 
 В лидерборде учитываются следующие метрики качества распознавания:
 
 * **CER** - Character Error Rate 
 
 <p align="center">
-  <img src="pics/CER.png" width="50%">
+  <img src="pics/CER.png" width="40%">
 </p>
 
-* **WER** - word error rate
+* **WER** - Word Error Rate
 
-![WER](wer.png)
+<p align="center">
+  <img src="pics/WER.png" width="40%">
+</p>
 
 * **Sentence Accuracy** - отношение количества полностью совпавших строк (учиитывая пробелы) к количеству строк в тестовой выборке.
 
-![ACC](sentence.png)
+<p align="center">
+  <img src="pics/SentenceAccuracy.png" width="40%">
+</p>
+
 
 Все метрики вычисляются для тестовой выборки.
 
