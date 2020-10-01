@@ -31,9 +31,7 @@ baseline.ipynb
 
 ### Описание метрик
 
-В лидерборде будут учитываться следующие метрики качества распознавания (на тестовой выборке), <img src="https://render.githubusercontent.com/render/math?math=n"> - размер тестовой выборки, <img src="https://render.githubusercontent.com/render/math?math=\text{pred}_i"> - это строка из символов, которую распознала модель на <img src="https://render.githubusercontent.com/render/math?math=i">-ом изображении, а <img src="https://render.githubusercontent.com/render/math?math=\text{true}_i"> - это истинный перевод <img src="https://render.githubusercontent.com/render/math?math=i">-ого изображения, произведенный экспертом.
-
-В приведенных выше формулах 〖pred〗_i — . В свою очередь 〖true〗_i — 
+В лидерборде будут учитываться следующие метрики качества распознавания (на тестовой выборке)
 
 * **CER** - Character Error Rate 
 
@@ -61,6 +59,8 @@ baseline.ipynb
 <p align="center">
   <img src="pics/IversonBracket.png" width="40%">
 </p>
+
+В формулах выше <img src="https://render.githubusercontent.com/render/math?math=n"> - размер тестовой выборки, <img src="https://render.githubusercontent.com/render/math?math=\text{pred}_i"> - это строка из символов, которую распознала модель на <img src="https://render.githubusercontent.com/render/math?math=i">-ом изображении, а <img src="https://render.githubusercontent.com/render/math?math=\text{true}_i"> - это истинный перевод <img src="https://render.githubusercontent.com/render/math?math=i">-ого изображения, произведенный экспертом.
 
 
 Про метрики дополнительно можно прочитать [тут](https://sites.google.com/site/textdigitisation/qualitymeasures/computingerrorrates). Методику подсчета метрик можно изучить подробнее в скрипте evaluate.py Он принимает на вход два параметра - pred.txt и true.txt. Это файлы со строками предсказаний и со строками реальных ответов соответственно.
