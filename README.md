@@ -32,7 +32,7 @@ baseline.ipynb
 Архитектура бейзлайна следующая:
 
 <p align="center">
-  <img src="pics/ArchitectureNN.png" width="30%">
+  <img src="pics/ArchitectureNN.jpg" width="100%">
 </p>
 
 
