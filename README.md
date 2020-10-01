@@ -55,13 +55,9 @@ baseline.ipynb
   <img src="pics/SentenceAccuracy.png" width="50%">
 </p>
 
-В этой формуле используется скобка Айверсона: <img src="pics/IversonBracket.png" width="40%">
+В этой формуле используется скобка Айверсона: <img src="pics/IversonBracket.png" width="10%">
 
-Про метрики дополнительно можно прочитать [тут](https://sites.google.com/site/textdigitisation/qualitymeasures/computingerrorrates). Методику подсчета метрик можно изучить подробнее в скрипте
-```bash
-evaluate.py
-```
-Он принимает на вход два параметра - pred.txt и true.txt. Это файлы со строками предсказаний и со строками реальных ответов соответственно.
+Про метрики дополнительно можно прочитать [тут](https://sites.google.com/site/textdigitisation/qualitymeasures/computingerrorrates). Методику подсчета метрик можно изучить подробнее в скрипте evaluate.py Он принимает на вход два параметра - pred.txt и true.txt. Это файлы со строками предсказаний и со строками реальных ответов соответственно.
 
 Главная метрика, по которой сортируется лидерборд, - <img src="https://render.githubusercontent.com/render/math?math=\text{CER}"> (меньше - лучше). В случае совпадения <img src="https://render.githubusercontent.com/render/math?math=\text{CER}"> у двух или более участников, сортировка для них будет вестись по <img src="https://render.githubusercontent.com/render/math?math=\text{WER}"> (меньше - лучше). Если и <img src="https://render.githubusercontent.com/render/math?math=\text{CER}">, и <img src="https://render.githubusercontent.com/render/math?math=\text{WER}"> совпадают, - смотрим на <img src="https://render.githubusercontent.com/render/math?math=\text{Sentence Accuracy}"> (больше - лучше).
 
