@@ -10,9 +10,9 @@ baseline.ipynb - Ноутбук с бейзлайном задачи.
 
 В лидерборде учитываются следующие метрики качества распознавания:
 
-* **CER** - character error rate 
+* **CER** - Character Error Rate 
 
-![CER](pics/CER.png){:height="50%" width="50%"}
+![CER](pics/CER.png){:height="40px" width="70px"}
 
 * **WER** - word error rate
 
