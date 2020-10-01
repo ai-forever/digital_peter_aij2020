@@ -19,7 +19,7 @@ Train выборку можно скачать [тут](https://drive.google.com
 
 его перевод (1_1_10.txt):
 ```bash
-                                         зело многа в гафѣ i непърестано выхо
+                                       зело многа в гафѣ i непърестано выхо
 ```
 
 ### Бейзлайн
@@ -39,8 +39,7 @@ baseline.ipynb
   <img src="pics/CER.png" width="40%">
 </p>
 
-Здесь <img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
-
+Здесь <img src="https://render.githubusercontent.com/render/math?math=dist_c"> - это расстояние Левенштейна, посчитанное для токенов-символов (включая пробел), <img src="https://render.githubusercontent.com/render/math?math=len_c"> - длина строки в символах.
 
 * **WER** - Word Error Rate
 
@@ -48,16 +47,24 @@ baseline.ipynb
   <img src="pics/WER.png" width="40%">
 </p>
 
+Здесь <img src="https://render.githubusercontent.com/render/math?math=dist_w"> - это расстояние Левенштейна, посчитанное для токенов-слов, <img src="https://render.githubusercontent.com/render/math?math=len_w"> - длина строки в словах.
+
 * **Sentence Accuracy** - отношение количества полностью совпавших строк (учиитывая пробелы) к количеству строк в тестовой выборке.
 
 <p align="center">
   <img src="pics/SentenceAccuracy.png" width="50%">
 </p>
 
+В этой формуле используется скобка Айверсона: <img src="pics/IversonBracket.png" width="40%">
 
-В формулах для CER и WER dist - это расстояние Левенштейна. Только для CER токеном является символ (dist_c), а для WER токеном является слово (dist_w). Методику подсчета метрик можно изучить подробнее в скрипте evaluate.py. Он принимает на вход два параметра - pred.txt и true.txt. Это файлы со строками предсказаний и со строками реальных ответов соответственно.
+Про метрики дополнительно можно прочитать [тут](https://sites.google.com/site/textdigitisation/qualitymeasures/computingerrorrates). Методику подсчета метрик можно изучить подробнее в скрипте
+```bash
+evaluate.py
+```
+Он принимает на вход два параметра - pred.txt и true.txt. Это файлы со строками предсказаний и со строками реальных ответов соответственно.
+
+Главная метрика, по которой сортируется лидерборд, - <img src="https://render.githubusercontent.com/render/math?math=\text{CER}"> (меньше - лучше). В случае совпадения <img src="https://render.githubusercontent.com/render/math?math=\text{CER}"> у двух или более участников, сортировка для них будет вестись по <img src="https://render.githubusercontent.com/render/math?math=\text{WER}"> (меньше - лучше). Если и <img src="https://render.githubusercontent.com/render/math?math=\text{CER}">, и <img src="https://render.githubusercontent.com/render/math?math=\text{WER}"> совпадают, - смотрим на <img src="https://render.githubusercontent.com/render/math?math=\text{Sentence Accuracy}"> (больше - лучше).
 
 
-Главная метрика, по которой сортируется лидерборд, - <img src="https://render.githubusercontent.com/render/math?math=\text{CER}"> (меньше - лучше). В случае совпадения CER у двух или более участников, сортировка для них будет вестись по WER (меньше - лучше). Если и CER, и WER совпадают, - смотрим на Sentence Accuracy (больше - лучше).
-
-Про метрики дополнительно можно прочитать вот здесь https://sites.google.com/site/textdigitisation/qualitymeasures/computingerrorrates.
+### Отправка решения
+TBD
