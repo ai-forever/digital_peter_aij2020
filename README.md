@@ -68,7 +68,9 @@ Train выборку можно скачать [тут](https://drive.google.com
 В формулах выше <img src="https://render.githubusercontent.com/render/math?math=n"> - размер тестовой выборки, <img src="https://render.githubusercontent.com/render/math?math=\text{pred}_i"> - это строка из символов, которую распознала модель на <img src="https://render.githubusercontent.com/render/math?math=i">-ом изображении, а <img src="https://render.githubusercontent.com/render/math?math=\text{true}_i"> - это истинный перевод <img src="https://render.githubusercontent.com/render/math?math=i">-ого изображения, произведенный экспертом.
 
 
-Про метрики дополнительно можно прочитать [тут](https://sites.google.com/site/textdigitisation/qualitymeasures/computingerrorrates). Методику подсчета метрик можно изучить подробнее в скрипте ```eval/evaluate.py```. Он принимает на вход два параметра - ```eval/pred.txt``` и ```eval/true.txt```. Это файлы со строками предсказаний и со строками реальных ответов соответственно. Качество можно посчитать следующей командой (вызванной из папки ```eval```):
+Про метрики дополнительно можно прочитать [тут](https://sites.google.com/site/textdigitisation/qualitymeasures/computingerrorrates). Методику подсчета метрик можно изучить подробнее в скрипте ```eval/evaluate.py```. Он принимает на вход два параметра - ```eval/pred.txt``` и ```eval/true.txt```. Это файлы со строками предсказаний и со строками реальных ответов соответственно. Количество строк в файлах должно совпадать! 
+
+Качество можно посчитать следующей командой (вызванной из папки ```eval```):
 
 ```bash
 python evaluate.py pred.txt true.txt
