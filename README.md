@@ -55,7 +55,11 @@ baseline.ipynb
   <img src="pics/SentenceAccuracy.png" width="50%">
 </p>
 
-В этой формуле используется скобка Айверсона: <img src="pics/IversonBracket.png" width="10%">
+В этой формуле используется скобка Айверсона:
+<p align="center">
+  <img src="pics/IversonBracket.png" width="40%">
+</p>
+
 
 Про метрики дополнительно можно прочитать [тут](https://sites.google.com/site/textdigitisation/qualitymeasures/computingerrorrates). Методику подсчета метрик можно изучить подробнее в скрипте evaluate.py Он принимает на вход два параметра - pred.txt и true.txt. Это файлы со строками предсказаний и со строками реальных ответов соответственно.
 
