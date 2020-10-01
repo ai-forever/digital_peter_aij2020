@@ -57,7 +57,7 @@ baseline.ipynb
 
 В этой формуле используется скобка Айверсона:
 <p align="center">
-  <img src="pics/IversonBracket.png" width="30%">
+  <img src="pics/IversonBracket.png" width="25%">
 </p>
 
 В формулах выше <img src="https://render.githubusercontent.com/render/math?math=n"> - размер тестовой выборки, <img src="https://render.githubusercontent.com/render/math?math=\text{pred}_i"> - это строка из символов, которую распознала модель на <img src="https://render.githubusercontent.com/render/math?math=i">-ом изображении, а <img src="https://render.githubusercontent.com/render/math?math=\text{true}_i"> - это истинный перевод <img src="https://render.githubusercontent.com/render/math?math=i">-ого изображения, произведенный экспертом.
