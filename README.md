@@ -31,7 +31,9 @@ baseline.ipynb
 
 ### Описание метрик
 
-В лидерборде будут учитываться следующие метрики качества распознавания (на test выборке):
+В лидерборде будут учитываться следующие метрики качества распознавания (на тестовой выборке), <img src="https://render.githubusercontent.com/render/math?math=n"> - размер тестовой выборки, <img src="https://render.githubusercontent.com/render/math?math=\text{pred}_i"> - это строка из символов, которую распознала модель на <img src="https://render.githubusercontent.com/render/math?math=i">-ом изображении, а <img src="https://render.githubusercontent.com/render/math?math=\text{true}_i"> - это истинный перевод <img src="https://render.githubusercontent.com/render/math?math=i">-ого изображения, произведенный экспертом.
+
+В приведенных выше формулах 〖pred〗_i — . В свою очередь 〖true〗_i — 
 
 * **CER** - Character Error Rate 
 
@@ -39,7 +41,7 @@ baseline.ipynb
   <img src="pics/CER.png" width="40%">
 </p>
 
-Здесь <img src="https://render.githubusercontent.com/render/math?math=dist_c"> - это расстояние Левенштейна, посчитанное для токенов-символов (включая пробел), <img src="https://render.githubusercontent.com/render/math?math=len_c"> - длина строки в символах.
+Здесь <img src="https://render.githubusercontent.com/render/math?math=\text{dist}_c"> - это расстояние Левенштейна, посчитанное для токенов-символов (включая пробел), <img src="https://render.githubusercontent.com/render/math?math=\text{len}_c"> - длина строки в символах.
 
 * **WER** - Word Error Rate
 
@@ -47,9 +49,9 @@ baseline.ipynb
   <img src="pics/WER.png" width="40%">
 </p>
 
-Здесь <img src="https://render.githubusercontent.com/render/math?math=dist_w"> - это расстояние Левенштейна, посчитанное для токенов-слов, <img src="https://render.githubusercontent.com/render/math?math=len_w"> - длина строки в словах.
+Здесь <img src="https://render.githubusercontent.com/render/math?math=\text{dist}_w"> - это расстояние Левенштейна, посчитанное для токенов-слов, <img src="https://render.githubusercontent.com/render/math?math=\text{len}_w"> - длина строки в словах.
 
-* **Sentence Accuracy** - отношение количества полностью совпавших строк (учиитывая пробелы) к количеству строк в тестовой выборке.
+* **Sentence Accuracy** - отношение количества полностью совпавших строк (учитывая пробелы) к количеству строк в тестовой выборке.
 
 <p align="center">
   <img src="pics/SentenceAccuracy.png" width="50%">
@@ -63,7 +65,7 @@ baseline.ipynb
 
 Про метрики дополнительно можно прочитать [тут](https://sites.google.com/site/textdigitisation/qualitymeasures/computingerrorrates). Методику подсчета метрик можно изучить подробнее в скрипте evaluate.py Он принимает на вход два параметра - pred.txt и true.txt. Это файлы со строками предсказаний и со строками реальных ответов соответственно.
 
-Главная метрика, по которой сортируется лидерборд, - <img src="https://render.githubusercontent.com/render/math?math=\text{CER}"> (меньше - лучше). В случае совпадения <img src="https://render.githubusercontent.com/render/math?math=\text{CER}"> у двух или более участников, сортировка для них будет вестись по <img src="https://render.githubusercontent.com/render/math?math=\text{WER}"> (меньше - лучше). Если и <img src="https://render.githubusercontent.com/render/math?math=\text{CER}">, и <img src="https://render.githubusercontent.com/render/math?math=\text{WER}"> совпадают, - смотрим на <img src="https://render.githubusercontent.com/render/math?math=\text{Sentence Accuracy}"> (больше - лучше).
+Главная метрика, по которой сортируется лидерборд, - CER (меньше - лучше). В случае совпадения CER у двух или более участников, сортировка для них будет вестись по WER (меньше - лучше). Если и CER, и WER совпадают, - смотрим на Sentence Accuracy (больше - лучше).
 
 
 ### Отправка решения
