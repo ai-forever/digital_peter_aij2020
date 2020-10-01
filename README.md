@@ -8,7 +8,7 @@
 
 Train выборку можно скачать [тут](https://drive.google.com/file/d/1kDmRCl692k6s9kQnNryq5ByAaHZX2uEw/view?usp=sharing).
 
-Внутри находятся 2 папки:  images и words. В папке images лежат jpg-файлы с вырезанными строками из документов Петра Великого, в папке words - txt-файлы (транскрибированные версии). Маппинг осуществляется по названию.
+Внутри находятся 2 папки:  images и words. В папке images лежат jpg-файлы с вырезанными строками из документов Петра Великого, в папке words - txt-файлы (транскрибированные версии jpg-файлов). Маппинг осуществляется по названию.
 
 Например, 
 
@@ -70,9 +70,12 @@ baseline.ipynb
 В формулах выше <img src="https://render.githubusercontent.com/render/math?math=n"> - размер тестовой выборки, <img src="https://render.githubusercontent.com/render/math?math=\text{pred}_i"> - это строка из символов, которую распознала модель на <img src="https://render.githubusercontent.com/render/math?math=i">-ом изображении, а <img src="https://render.githubusercontent.com/render/math?math=\text{true}_i"> - это истинный перевод <img src="https://render.githubusercontent.com/render/math?math=i">-ого изображения, произведенный экспертом.
 
 
-Про метрики дополнительно можно прочитать [тут](https://sites.google.com/site/textdigitisation/qualitymeasures/computingerrorrates). Методику подсчета метрик можно изучить подробнее в скрипте evaluate.py. Он принимает на вход два параметра - pred.txt и true.txt. Это файлы со строками предсказаний и со строками реальных ответов соответственно.
+Про метрики дополнительно можно прочитать [тут](https://sites.google.com/site/textdigitisation/qualitymeasures/computingerrorrates). Методику подсчета метрик можно изучить подробнее в скрипте ```bash evaluate.py```. Он принимает на вход два параметра - pred.txt и true.txt. Это файлы со строками предсказаний и со строками реальных ответов соответственно. Качество 
 
 Главная метрика, по которой сортируется лидерборд, - CER (меньше - лучше). В случае совпадения CER у двух или более участников, сортировка для них будет вестись по WER (меньше - лучше). Если и CER, и WER совпадают, - смотрим на Sentence Accuracy (больше - лучше).
+
+Последняя версия модели (см. бейзлайн) имеет следующие метрики качества, посчитанные на тестовой выборке:
+
 
 
 ### Отправка решения
