@@ -29,10 +29,10 @@ Train выборку можно скачать [тут](https://drive.google.com
 baseline.ipynb
 ```
 
-Архитектура бейзлайна следующая:
+Используется следующая архитектура:
 
 <p align="center">
-  <img src="pics/ArchitectureNN.jpg" width="100%">
+  <img src="pics/ArchitectureNN.jpg" width="60%">
 </p>
 
 
