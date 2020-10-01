@@ -12,7 +12,7 @@ baseline.ipynb - Ноутбук с бейзлайном задачи.
 
 * **CER** - character error rate 
 
-![CER](./pics/cer.png)
+![CER](pics/cer.png)
 
 * **WER** - word error rate
 
