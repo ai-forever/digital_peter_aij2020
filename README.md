@@ -49,7 +49,7 @@ baseline.ipynb
 
 Здесь <img src="https://render.githubusercontent.com/render/math?math=\text{dist}_w"> - это расстояние Левенштейна, посчитанное для токенов-слов, <img src="https://render.githubusercontent.com/render/math?math=\text{len}_w"> - длина строки в словах.
 
-* **Sentence Accuracy** - отношение количества полностью совпавших строк (учитывая пробелы) к количеству строк в тестовой выборке.
+* **Sentence Accuracy** - отношение количества полностью совпавших строк (учитывая пробелы) к количеству строк в выборке.
 
 <p align="center">
   <img src="pics/SentenceAccuracy.png" width="50%">
@@ -57,7 +57,7 @@ baseline.ipynb
 
 В этой формуле используется скобка Айверсона:
 <p align="center">
-  <img src="pics/IversonBracket.png" width="40%">
+  <img src="pics/IversonBracket.png" width="30%">
 </p>
 
 В формулах выше <img src="https://render.githubusercontent.com/render/math?math=n"> - размер тестовой выборки, <img src="https://render.githubusercontent.com/render/math?math=\text{pred}_i"> - это строка из символов, которую распознала модель на <img src="https://render.githubusercontent.com/render/math?math=i">-ом изображении, а <img src="https://render.githubusercontent.com/render/math?math=\text{true}_i"> - это истинный перевод <img src="https://render.githubusercontent.com/render/math?math=i">-ого изображения, произведенный экспертом.
