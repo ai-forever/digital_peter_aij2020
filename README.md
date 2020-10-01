@@ -68,7 +68,23 @@ Train выборку можно скачать [тут](https://drive.google.com
 В формулах выше <img src="https://render.githubusercontent.com/render/math?math=n"> - размер тестовой выборки, <img src="https://render.githubusercontent.com/render/math?math=\text{pred}_i"> - это строка из символов, которую распознала модель на <img src="https://render.githubusercontent.com/render/math?math=i">-ом изображении, а <img src="https://render.githubusercontent.com/render/math?math=\text{true}_i"> - это истинный перевод <img src="https://render.githubusercontent.com/render/math?math=i">-ого изображения, произведенный экспертом.
 
 
-Про метрики дополнительно можно прочитать [тут](https://sites.google.com/site/textdigitisation/qualitymeasures/computingerrorrates). Методику подсчета метрик можно изучить подробнее в скрипте ```evaluate.py```. Он принимает на вход два параметра - ```pred.txt``` и ```true.txt```. Это файлы со строками предсказаний и со строками реальных ответов соответственно. Качество 
+Про метрики дополнительно можно прочитать [тут](https://sites.google.com/site/textdigitisation/qualitymeasures/computingerrorrates). Методику подсчета метрик можно изучить подробнее в скрипте ```eval/evaluate.py```. Он принимает на вход два параметра - ```eval/pred.txt``` и ```eval/true.txt```. Это файлы со строками предсказаний и со строками реальных ответов соответственно. Качество можно посчитать следующей командой (вызванной из папки ```eval```):
+
+```bash
+python evaluate.py pred.txt true.txt
+```
+
+Результат отображается в следующем виде:
+```bash
+Ground truth -> Recognized
+[ERR:3] "Это соревнование посвящено" -> "Эт срвнование посвящено"
+[ERR:3] "распознаванию строк из рукописей" -> "распознаваниюстр ок из рукписей"
+[ERR:2] "Петра I" -> "Птра 1"
+[OK] "Удачи!" -> "Удачи!"
+Character error rate: 11.267606%
+Word error rate: 70.000000%
+String accuracy: 25.000000%
+```
 
 Главная метрика, по которой сортируется лидерборд, - **CER** (меньше - лучше). В случае совпадения **CER** у двух или более участников, сортировка для них будет вестись по **WER** (меньше - лучше). Если и **CER**, и **WER** совпадают, - смотрим на **Sentence Accuracy** (больше - лучше).
 
