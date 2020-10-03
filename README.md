@@ -56,7 +56,7 @@ Train выборку можно скачать [тут](https://drive.google.com
 
 Здесь <img src="https://render.githubusercontent.com/render/math?math=\text{dist}_w"> - это расстояние Левенштейна, посчитанное для токенов-слов, <img src="https://render.githubusercontent.com/render/math?math=\text{len}_w"> - длина строки в словах.
 
-* **Sentence Accuracy** - отношение количества полностью совпавших строк (учитывая пробелы) к количеству строк в выборке.
+* **Sentence Accuracy** - отношение количества полностью совпавших строк к количеству строк в выборке.
 
 <p align="center">
   <img src="pics/SentenceAccuracy.png" width="40%">
