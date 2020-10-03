@@ -46,7 +46,7 @@ Train выборку можно скачать [тут](https://drive.google.com
   <img src="pics/CER.png" width="30%">
 </p>
 
-Здесь <img src="https://render.githubusercontent.com/render/math?math=\text{dist}_c"> - это расстояние Левенштейна, посчитанное для токенов-символов (включая пробел), <img src="https://render.githubusercontent.com/render/math?math=\text{len}_c"> - длина строки в символах.
+Здесь <img src="https://render.githubusercontent.com/render/math?math=\text{dist}_c"> - это расстояние Левенштейна, посчитанное для токенов-символов (включая пробелы), <img src="https://render.githubusercontent.com/render/math?math=\text{len}_c"> - длина строки в символах.
 
 * **WER** - Word Error Rate
 
