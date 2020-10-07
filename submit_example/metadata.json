@@ -1,0 +1,4 @@
+{
+  "image": "odsai/python-gpu",
+  "entry_point": "python run_eval.py"
+}
