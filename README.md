@@ -6,9 +6,11 @@
 
 Участникам предлагается построчно распознавать рукописный текст Петра I.
 
+Развернутое описание задачи (с погружением в проблематику) можно прочитать в ```desc/Развернутое описание задачи.pdf```
+
 Train выборку можно скачать [тут](https://drive.google.com/file/d/1kDmRCl692k6s9kQnNryq5ByAaHZX2uEw/view?usp=sharing).
 
-Внутри находятся 2 папки:  images и words. В папке images лежат .jpg файлы с вырезанными строками из документов Петра Великого, в папке words - .txt файлы (транскрибированные версии). Маппинг осуществляется по названию.
+Внутри находятся 2 папки:  images и words. В папке images лежат jpg-файлы с вырезанными строками из документов Петра Великого, в папке words - txt-файлы (транскрибированные версии jpg-файлов). Маппинг осуществляется по названию.
 
 Например, 
 
@@ -19,15 +21,20 @@ Train выборку можно скачать [тут](https://drive.google.com
 
 его перевод (1_1_10.txt):
 ```bash
-                                       зело многа в гафѣ i непърестано выхо
+                                  зело многа в гафѣ i непърестано выхо
 ```
 
 ### Бейзлайн
 
 Ноутбук с бейзлайном задачи:
-```bash
-baseline.ipynb
-```
+```baseline.ipynb```
+
+Для распознавания текста (в бейзлайне) используется следующая архитектура:
+
+<p align="center">
+  <img src="pics/ArchitectureNN.jpg" width="60%">
+</p>
+
 
 ### Описание метрик
 
@@ -36,37 +43,58 @@ baseline.ipynb
 * **CER** - Character Error Rate 
 
 <p align="center">
-  <img src="pics/CER.png" width="40%">
+  <img src="pics/CER.png" width="30%">
 </p>
 
-Здесь <img src="https://render.githubusercontent.com/render/math?math=\text{dist}_c"> - это расстояние Левенштейна, посчитанное для токенов-символов (включая пробел), <img src="https://render.githubusercontent.com/render/math?math=\text{len}_c"> - длина строки в символах.
+Здесь <img src="https://render.githubusercontent.com/render/math?math=\text{dist}_c"> - это расстояние Левенштейна, посчитанное для токенов-символов (включая пробелы), <img src="https://render.githubusercontent.com/render/math?math=\text{len}_c"> - длина строки в символах.
 
 * **WER** - Word Error Rate
 
 <p align="center">
-  <img src="pics/WER.png" width="40%">
+  <img src="pics/WER.png" width="30%">
 </p>
 
 Здесь <img src="https://render.githubusercontent.com/render/math?math=\text{dist}_w"> - это расстояние Левенштейна, посчитанное для токенов-слов, <img src="https://render.githubusercontent.com/render/math?math=\text{len}_w"> - длина строки в словах.
 
-* **Sentence Accuracy** - отношение количества полностью совпавших строк (учитывая пробелы) к количеству строк в выборке.
+* **Sentence Accuracy** - отношение количества полностью совпавших строк к количеству строк в выборке.
 
 <p align="center">
-  <img src="pics/SentenceAccuracy.png" width="50%">
+  <img src="pics/SentenceAccuracy.png" width="40%">
 </p>
 
 В этой формуле используется скобка Айверсона:
 <p align="center">
-  <img src="pics/IversonBracket.png" width="30%">
+  <img src="pics/IversonBracket.png" width="20%">
 </p>
 
 В формулах выше <img src="https://render.githubusercontent.com/render/math?math=n"> - размер тестовой выборки, <img src="https://render.githubusercontent.com/render/math?math=\text{pred}_i"> - это строка из символов, которую распознала модель на <img src="https://render.githubusercontent.com/render/math?math=i">-ом изображении, а <img src="https://render.githubusercontent.com/render/math?math=\text{true}_i"> - это истинный перевод <img src="https://render.githubusercontent.com/render/math?math=i">-ого изображения, произведенный экспертом.
 
 
-Про метрики дополнительно можно прочитать [тут](https://sites.google.com/site/textdigitisation/qualitymeasures/computingerrorrates). Методику подсчета метрик можно изучить подробнее в скрипте evaluate.py. Он принимает на вход два параметра - pred.txt и true.txt. Это файлы со строками предсказаний и со строками реальных ответов соответственно.
+Про метрики дополнительно можно прочитать [тут](https://sites.google.com/site/textdigitisation/qualitymeasures/computingerrorrates). Методику подсчета метрик можно изучить подробнее в скрипте ```eval/evaluate.py```. Он принимает на вход два параметра - ```eval/pred.txt``` и ```eval/true.txt```. Это файлы со строками предсказаний и со строками реальных ответов соответственно. Количество строк в файлах должно совпадать! 
 
-Главная метрика, по которой сортируется лидерборд, - CER (меньше - лучше). В случае совпадения CER у двух или более участников, сортировка для них будет вестись по WER (меньше - лучше). Если и CER, и WER совпадают, - смотрим на Sentence Accuracy (больше - лучше).
+Качество можно посчитать следующей командой (вызванной из папки ```eval```):
 
+```bash
+python evaluate.py pred.txt true.txt
+```
 
-### Отправка решения
-TBD
+Результат отображается в следующем виде:
+```bash
+Ground truth -> Recognized
+[ERR:3] "Это соревнование посвящено" -> "Эт срвнование посвящено"
+[ERR:3] "распознаванию строк из рукописей" -> "распознаваниюстр ок из рукписей"
+[ERR:2] "Петра I" -> "Птра 1"
+[OK] "Удачи!" -> "Удачи!"
+Character error rate: 11.267606%
+Word error rate: 70.000000%
+String accuracy: 25.000000%
+```
+
+Главная метрика, по которой сортируется лидерборд, - **CER** (меньше - лучше). В случае совпадения **CER** у двух или более участников, сортировка для них будет вестись по **WER** (меньше - лучше). Если и **CER**, и **WER** совпадают, - смотрим на **Sentence Accuracy** (больше - лучше). Если все метрики сопадают, тогда первым будет решение, загруженное раньше по времени (если и тут все совпадает, то сортируем по алфавиту по названиям команд).
+
+Последняя версия модели (см. бейзлайн) имеет следующие значения метрик качества, посчитанных на public-части тестовой выборки:
+```bash
+CER = 10.53%
+WER = 44.43%
+String Accuracy = 21.66%
+```

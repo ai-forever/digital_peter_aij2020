@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import os
 import sys
 import editdistance
@@ -24,6 +26,10 @@ def evaluate():
     names, true_text = read(true_path)
 
     _, predictions = read(pred_path, names)
+
+    if len(predictions) != len(true_text):
+        sys.exit('len(prediction_text) = ' + str(len(predictions)) + '\nlen(true_text) = ' + str(len(true_text)) + \
+            '\nКоличество строк не совпадает!')
 
     # По сути, мы в цикле пробегаемся по предсказаниям, считаем расстояние Левенштейна,
     # а затем делим сумму расстояний на сумму длин всех правильных ответов
