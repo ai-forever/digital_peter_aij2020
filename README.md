@@ -10,7 +10,7 @@
 
 Train выборку можно скачать [тут](https://drive.google.com/file/d/1kDmRCl692k6s9kQnNryq5ByAaHZX2uEw/view?usp=sharing).
 
-Внутри находятся 2 папки:  images и words. В папке images лежат jpg-файлы с вырезанными строками из документов Петра Великого, в папке words - txt-файлы (транскрибированные версии jpg-файлов). Маппинг осуществляется по названию.
+Внутри находятся 2 папки:  ```images``` и ```words```. В папке ```images``` лежат jpg-файлы с вырезанными строками из документов Петра Великого, в папке ```words``` - txt-файлы (транскрибированные версии jpg-файлов). Маппинг осуществляется по названию.
 
 Например, 
 
@@ -70,12 +70,12 @@ Train выборку можно скачать [тут](https://drive.google.com
 В формулах выше <img src="https://render.githubusercontent.com/render/math?math=n"> - размер тестовой выборки, <img src="https://render.githubusercontent.com/render/math?math=\text{pred}_i"> - это строка из символов, которую распознала модель на <img src="https://render.githubusercontent.com/render/math?math=i">-ом изображении, а <img src="https://render.githubusercontent.com/render/math?math=\text{true}_i"> - это истинный перевод <img src="https://render.githubusercontent.com/render/math?math=i">-ого изображения, произведенный экспертом.
 
 
-Про метрики дополнительно можно прочитать [тут](https://sites.google.com/site/textdigitisation/qualitymeasures/computingerrorrates). Методику подсчета метрик можно изучить подробнее в скрипте ```eval/evaluate.py```. Он принимает на вход два параметра - ```eval/pred.txt``` и ```eval/true.txt```. Это файлы со строками предсказаний и со строками реальных ответов соответственно. Количество строк в файлах должно совпадать! 
+Про метрики дополнительно можно прочитать [тут](https://sites.google.com/site/textdigitisation/qualitymeasures/computingerrorrates). Методику подсчета метрик можно изучить подробнее в скрипте ```eval/evaluate.py```. Он принимает на вход два параметра - ```eval/pred``` и ```eval/true```. В папке ```eval/true``` должны находиться txt-файлы с истинным переводом (структура как в папке ```words```), в папке ```eval/pred``` - их версии, полученные с помощью автоматического транскрибирования моделью (также в формате txt). При подсчете ошибок маппинг также осуществляется по названию, поэтому списки названий файлов в папках ```eval/true``` и ```eval/pred``` **должны полностью совпадать**!
 
 Качество можно посчитать следующей командой (вызванной из папки ```eval```):
 
 ```bash
-python evaluate.py pred.txt true.txt
+python evaluate.py pred true
 ```
 
 Результат отображается в следующем виде:
@@ -94,9 +94,9 @@ String accuracy: 25.000000%
 
 Последняя версия модели (см. бейзлайн) имеет следующие значения метрик качества, посчитанных на public-части тестовой выборки:
 ```bash
-CER = 10.53%
-WER = 44.43%
-String Accuracy = 21.66%
+CER = 10.525554%
+WER = 44.431804%
+String Accuracy = 21.662304%
 ```
 ### Отправка решения
 
