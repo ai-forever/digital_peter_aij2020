@@ -70,12 +70,14 @@ Train выборку можно скачать [тут](https://drive.google.com
 В формулах выше <img src="https://render.githubusercontent.com/render/math?math=n"> - размер тестовой выборки, <img src="https://render.githubusercontent.com/render/math?math=\text{pred}_i"> - это строка из символов, которую распознала модель на <img src="https://render.githubusercontent.com/render/math?math=i">-ом изображении, а <img src="https://render.githubusercontent.com/render/math?math=\text{true}_i"> - это истинный перевод <img src="https://render.githubusercontent.com/render/math?math=i">-ого изображения, произведенный экспертом.
 
 
-Про метрики дополнительно можно прочитать [тут](https://sites.google.com/site/textdigitisation/qualitymeasures/computingerrorrates). Методику подсчета метрик можно изучить подробнее в скрипте ```eval/evaluate.py```. Он принимает на вход два параметра - ```eval/pred``` и ```eval/true```. В папке ```eval/true``` должны находиться txt-файлы с истинным переводом (структура как в папке ```words```), в папке ```eval/pred``` - их версии, полученные с помощью автоматического транскрибирования моделью (также в формате txt). При подсчете ошибок маппинг осуществляется по названию, поэтому списки названий файлов в папках ```eval/true``` и ```eval/pred``` **должны полностью совпадать**!
+Про метрики дополнительно можно прочитать [тут](https://sites.google.com/site/textdigitisation/qualitymeasures/computingerrorrates). 
+
+Методику подсчета метрик можно изучить подробнее в скрипте ```eval/evaluate.py```. Он принимает на вход два параметра - ```eval/pred_dir``` и ```eval/true_dir```. В папке ```eval/true_dir``` должны находиться txt-файлы с истинным переводом строк (структура как в папке ```words```), в папке ```eval/pred_dir``` - txt-файлы, содержащие распознанные (моделью) строки. Маппинг опять же осуществляется по названию, поэтому списки названий файлов в папках ```eval/true_dir``` и ```eval/pred_dir``` **должны полностью совпадать**!
 
 Качество можно посчитать следующей командой (вызванной из папки ```eval```):
 
 ```bash
-python evaluate.py pred true
+python evaluate.py pred_dir true_dir
 ```
 
 Результат отображается в следующем виде:
