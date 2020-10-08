@@ -7,12 +7,17 @@ import editdistance
 
 def read(path, names=None):
     if names is None:
-        names = os.listdir(path)
+        names = sorted(os.listdir(path))
+    else:
+        names_presented = sorted(os.listdir(path))
+        if names_presented != names:
+            sys.exit('The list of recognized files does not match the complete list of files with the correct transcription!')
+
     data = []
     for name in names:
         with open(os.path.join(path, name), 'r') as file:
             data.append(file.read().strip())
-
+            
     return names, data
 
 
@@ -24,12 +29,7 @@ def evaluate():
     true_path = sys.argv[2]
 
     names, true_text = read(true_path)
-
     _, predictions = read(pred_path, names)
-
-    if len(predictions) != len(true_text):
-        sys.exit('len(prediction_text) = ' + str(len(predictions)) + '\nlen(true_text) = ' + str(len(true_text)) + \
-            '\nКоличество строк не совпадает!')
 
     # По сути, мы в цикле пробегаемся по предсказаниям, считаем расстояние Левенштейна,
     # а затем делим сумму расстояний на сумму длин всех правильных ответов
