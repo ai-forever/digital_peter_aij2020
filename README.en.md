@@ -1,4 +1,4 @@
-# AI Journey 2020 Digital Peter
+# Digital Peter: recognition of Peter the Great's manuscripts
 
 Digital Peter is an educational task with a historical slant created on the basis of several AI technologies (Computer Vision, NLP, and knowledge graphs). The task was prepared jointly with the Saint Petersburg Institute of History (N.P.Lihachov mansion) of Russian Academy of Sciences, Federal Archival Agency of Russia and Russian State Archive of Ancient Acts.
 
