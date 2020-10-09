@@ -6,7 +6,7 @@
 
 Участникам предлагается построчно распознавать рукописный текст Петра I.
 
-Развернутое описание задачи (с погружением в проблематику) можно прочитать в ```desc/detailed_description_of_the_task_ru.pdf```
+Развернутое описание задачи (с погружением в проблематику) можно прочитать в [```desc/detailed_description_of_the_task_ru.pdf```](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/desc/detailed_description_of_the_task_ru.pdf)
 
 Train выборку можно скачать [тут](https://drive.google.com/file/d/1kDmRCl692k6s9kQnNryq5ByAaHZX2uEw/view?usp=sharing).
 
