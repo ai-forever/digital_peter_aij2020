@@ -1,49 +1,47 @@
 # AI Journey 2020 Digital Peter
 
-The English version of this document is [here]()
+Digital Peter is an educational task with a historical slant created on the basis of several AI technologies (Computer Vision, NLP, and knowledge graphs). The task was prepared jointly with the Saint Petersburg Institute of History (N.P.Lihachov mansion) of Russian Academy of Sciences, Federal Archival Agency of Russia and Russian State Archive of Ancient Acts.
 
-Соревнование по распознаванию древних текстов, написанных рукой Петра Великого.
+### Description of the task and data
 
-### Описание задачи и данных
+Contestants are invited to create an algorithm for line-by-line recognition of manuscripts written by Peter the Great.
 
-Участникам предлагается построчно распознавать рукописный текст Петра I.
+A detailed description of the problem (with an immersion in the problem) can be found in [```desc/detailed_description_of_the_task_ru.pdf```](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/desc/detailed_description_of_the_task_ru.pdf)
 
-Развернутое описание задачи (с погружением в проблематику) можно прочитать в [```desc/detailed_description_of_the_task_ru.pdf```](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/desc/detailed_description_of_the_task_ru.pdf)
+Train dataset can be downloaded [тут](https://storage.yandexcloud.net/datasouls-ods/materials/46b7bb85/datasets.zip).
 
-Train выборку можно скачать [тут](https://storage.yandexcloud.net/datasouls-ods/materials/46b7bb85/datasets.zip).
+There are 2 folders inside: `images` and `words`. The `images` folder contains jpg files with cut lines from Peter the Great's documents, and the `words` folder contains txt files (transcribed versions of jpg files). Mapping is performed by name. 
 
-Внутри находятся 2 папки:  ```images``` и ```words```. В папке ```images``` лежат jpg-файлы с вырезанными строками из документов Петра Великого, в папке ```words``` - txt-файлы (транскрибированные версии jpg-файлов). Маппинг осуществляется по названию.
+For example,
 
-Например, 
-
-оригинал (1_1_10.jpg):
+the original text (1_1_10.jpg):
 <p align="center">
   <img src="pics/1_1_10.jpg" width="70%">
 </p>
 
-его перевод (1_1_10.txt):
+the translation (1_1_10.txt):
 ```bash
                                   зело многа в гафѣ i непърестано выхо
 ```
 
-Выборка была подготовлена совместно с рабочей группой, состоящей из научных сотрудников СПбИИ РАН - специалистов по истории Петровской эпохи, а также палеографии и археографии. Большую помощь оказали Росархив и РГАДА, которые предоставили цифровые копии автографов.
+This dataset was prepared jointly with a working group consisting of researchers from the Saint Petersburg Institute of History (N.P.Lihachov mansion) of Russian Academy of Sciences - specialists in the history of the Petrine era, as well as paleography and archeography. Federal Archival Agency of Russia and Russian State Archive of Ancient Acts were of great help by providing digital copies of autographs.
 
 
-### Бейзлайн
+### Baseline
 
-Ноутбук с бейзлайном задачи:
+Notebook with a baseline task:
 [```baseline.ipynb```](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/baseline.ipynb)
 
-Для распознавания текста (в бейзлайне) используется следующая архитектура:
+For text recognition (in baseline), the following architecture is used:
 
 <p align="center">
   <img src="pics/ArchitectureNN.jpg" width="60%">
 </p>
 
 
-### Описание метрик
+### Description of the metrics
 
-В лидерборде будут учитываться следующие метрики качества распознавания (на тестовой выборке)
+The leaderboard will take into account the following recognition quality metrics (in the test sample)
 
 * **CER** - Character Error Rate 
 
@@ -51,7 +49,7 @@ Train выборку можно скачать [тут](https://storage.yandexcl
   <img src="pics/CER.png" width="30%">
 </p>
 
-Здесь <img src="https://render.githubusercontent.com/render/math?math=\text{dist}_c"> - это расстояние Левенштейна, посчитанное для токенов-символов (включая пробелы), <img src="https://render.githubusercontent.com/render/math?math=\text{len}_c"> - длина строки в символах.
+<img src="https://render.githubusercontent.com/render/math?math=\text{dist}_c"> is the Levenshtein distance calculated for character tokens (including spaces), <img src="https://render.githubusercontent.com/render/math?math=\text{len}_c"> is the length of the string in characters.
 
 * **WER** - Word Error Rate
 
@@ -59,33 +57,33 @@ Train выборку можно скачать [тут](https://storage.yandexcl
   <img src="pics/WER.png" width="30%">
 </p>
 
-Здесь <img src="https://render.githubusercontent.com/render/math?math=\text{dist}_w"> - это расстояние Левенштейна, посчитанное для токенов-слов, <img src="https://render.githubusercontent.com/render/math?math=\text{len}_w"> - длина строки в словах.
+<img src="https://render.githubusercontent.com/render/math?math=\text{dist}_w"> is the Levenshtein distance calculated for word tokens, <img src="https://render.githubusercontent.com/render/math?math=\text{len}_w"> - is the length of the string in words.
 
-* **Sentence Accuracy** - отношение количества полностью совпавших строк к количеству строк в выборке.
+* **Sentence Accuracy** - number of fully matching test strings divided by total number of test strings.
 
 <p align="center">
   <img src="pics/SentenceAccuracy.png" width="40%">
 </p>
 
-В этой формуле используется скобка Айверсона:
+Here we use Iverson bracket:
 <p align="center">
   <img src="pics/IversonBracket.png" width="20%">
 </p>
 
-В формулах выше <img src="https://render.githubusercontent.com/render/math?math=n"> - размер тестовой выборки, <img src="https://render.githubusercontent.com/render/math?math=\text{pred}_i"> - это строка из символов, которую распознала модель на <img src="https://render.githubusercontent.com/render/math?math=i">-ом изображении, а <img src="https://render.githubusercontent.com/render/math?math=\text{true}_i"> - это истинный перевод <img src="https://render.githubusercontent.com/render/math?math=i">-ого изображения, произведенный экспертом.
+In the formulas above, <img src="https://render.githubusercontent.com/render/math?math=n"> is the size of the test sample, <img src="https://render.githubusercontent.com/render/math?math=\text{pred}_i"> is the string of characters that the model recognized in the <img src="https://render.githubusercontent.com/render/math?math=i">-th image, <img src="https://render.githubusercontent.com/render/math?math=\text{true}_i"> is the true translation of the <img src="https://render.githubusercontent.com/render/math?math=i">-th image made by the expert.
+
+Follow this [link](https://sites.google.com/site/textdigitisation/qualitymeasures/computingerrorrates) to learn more about the metrics.
 
 
-Про метрики дополнительно можно прочитать [тут](https://sites.google.com/site/textdigitisation/qualitymeasures/computingerrorrates). 
+You can learn more about the method of calculating metrics in the script [```eval/evaluate.py```](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/eval/evaluate.py). It accepts two parameters as input - [```eval/pred_dir```](https://github.com/sberbank-ai/digital_peter_aij2020/tree/master/eval/pred_dir) and [```eval/true_dir```](https://github.com/sberbank-ai/digital_peter_aij2020/tree/master/eval/true_dir). The [```eval/true_dir```](https://github.com/sberbank-ai/digital_peter_aij2020/tree/master/eval/true_dir) folder should contain txt-files with true strings translations (the structure is the same as in the `words` folder),  while the [```eval/pred_dir```](https://github.com/sberbank-ai/digital_peter_aij2020/tree/master/eval/pred_dir) folder should contain txt-files with recognized strings (using the model). Mapping is again done by name. So the lists of files’ names in the folders [```eval/true_dir```](https://github.com/sberbank-ai/digital_peter_aij2020/tree/master/eval/true_dir) and [```eval/pred_dir```](https://github.com/sberbank-ai/digital_peter_aij2020/tree/master/eval/pred_dir) **should be the same**!
 
-Методику подсчета метрик можно изучить подробнее в скрипте [```eval/evaluate.py```](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/eval/evaluate.py). Он принимает на вход два параметра - [```eval/pred_dir```](https://github.com/sberbank-ai/digital_peter_aij2020/tree/master/eval/pred_dir) и [```eval/true_dir```](https://github.com/sberbank-ai/digital_peter_aij2020/tree/master/eval/true_dir). В папке [```eval/true_dir```](https://github.com/sberbank-ai/digital_peter_aij2020/tree/master/eval/true_dir) должны находиться txt-файлы с истинным переводом строк (структура как в папке ```words```), в папке [```eval/pred_dir```](https://github.com/sberbank-ai/digital_peter_aij2020/tree/master/eval/pred_dir) - txt-файлы, содержащие распознанные (моделью) строки. Маппинг опять же осуществляется по названию, поэтому списки названий файлов в папках [```eval/true_dir```](https://github.com/sberbank-ai/digital_peter_aij2020/tree/master/eval/true_dir) и [```eval/pred_dir```](https://github.com/sberbank-ai/digital_peter_aij2020/tree/master/eval/pred_dir) **должны полностью совпадать**!
-
-Качество можно посчитать следующей командой (вызванной из папки [```eval```](https://github.com/sberbank-ai/digital_peter_aij2020/tree/master/eval)):
+The quality can be calculated using the following command  (called from the [```eval```](https://github.com/sberbank-ai/digital_peter_aij2020/tree/master/eval) folder):
 
 ```bash
 python evaluate.py pred_dir true_dir
 ```
 
-Результат отображается в следующем виде:
+The result is displayed as follows:
 ```bash
 Ground truth -> Recognized
 [ERR:3] "Это соревнование посвящено" -> "Эт срвнование посвящено"
@@ -97,9 +95,9 @@ Word error rate: 70.000000%
 String accuracy: 25.000000%
 ```
 
-Главная метрика, по которой сортируется лидерборд, - **CER**, %, (меньше - лучше). В случае совпадения **CER** у двух или более участников, сортировка для них будет вестись по **WER**, %, (меньше - лучше). Если и **CER**, и **WER** совпадают, - смотрим на **Sentence Accuracy**, %, (больше - лучше). Следующий показатель - время работы модели на тестовой выборке, **Time**, sec., (меньше - лучше). Если все метрики сопадают, тогда первым будет решение, загруженное раньше по времени (если и тут все совпадает, то сортируем по алфавиту по названиям команд).
+**CER**, %, is the key metric used to sort the leaderboard (the less the better). If two or more contestants earn the same **CER**, they will be sorted using **WER**, %, (the less the better). If both **CER** and **WER** match, **Sentence Accuracy**, %, will be used (the more the better). Next metric is the **Time**, sec., - execution time for your model to process the test dataset on NVidia Tesla V100 (the less the better). If all the metrics match, then the first will be the solution loaded earlier in time (if everything is the same here, then we will sort alphabetically by command names).
 
-Последняя версия модели (см. [```baseline.ipynb```](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/baseline.ipynb)) имеет следующие значения метрик качества, посчитанных на public-части тестовой выборки:
+The latest version of the model (see [```baseline.ipynb```](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/baseline.ipynb)) has the following values for quality metrics calculated on the public part of the test sample:
 ```bash
 CER = 10.526%
 WER = 44.432%
@@ -107,9 +105,9 @@ String Accuracy = 21.662%
 Time = 60 sec
 ```
 
-### Формат решения
+### Solution format
 
-В качестве решений принимается алгоритм (код + необходимые файлы) и описание точки запуска в виде одного архива. В корне архива с решением должен лежать файл `metadata.json` со структурой:
+The accepted solution is ZIP archive, which contains the algorithm (your code) and the entrypoint to run it. The entrypoint should be set in `metadata.json` file in the root of your solution archive:
 
 ```
 {
@@ -118,7 +116,7 @@ Time = 60 sec
 }
 ```
 
-Например:
+For example:
 ```
 {
    "image": "odsai/python-gpu",
@@ -126,19 +124,19 @@ Time = 60 sec
 }
 ```
 
-Данные следует читать из папки `/data`, предсказания писать в `/output`. Для каждой картинки из папки `/data` 
-вида `<image_name>.jpg` нужно записать в `/output` `<image_name>.txt` с распознанным текстом.
+The data is supposed to be read from `/data` directory. Your predictions should go to `/output`. For each picture file from `/data` `<image_name>.jpg` you have to get the corresponding recognized text file `<image_name>.txt` in `/output`.
 
-Решение запускается в Docker контейнере. Вы можете воспользоваться готовым образом https://hub.docker.com/r/odsai/python-gpu. В нем предустановлены CUDA 10.1, CUDNN 7.6 и актуальные версии Python библиотек. При желании вы можете использовать свой образ, выложив его на https://hub.docker.com.
+The solution is run in Docker container. You can start with the ready-to-go image we prepared https://hub.docker.com/r/odsai/python-gpu. It contains CUDA 10.1, CUDNN 7.6 and the latest Python libraries. Also you can use your own image for the competition, which must be uploaded to https://hub.docker.com. The image name is changed in hereabove mentioned `metadata.json`.
 
-Доступные ресурсы:
-- 8 ядер CPU 
-- 94Gb RAM
-- Видеокарта NVidia Tesla V100
 
-Ограниченя:
-- 5Gb памяти для рабочей директории
-- 5Gb на архив с решением
-- 10 минут на работу решения
+Provided resources:
+- 8 CPU cores
+- 94 GB RAM
+- NVidia Tesla V100 GPU
+Restrictions:
+- Up to 5 GB size of the working dir
+- Up to 5 GB size of an archive with the solution
+- 10 minutes calculation time limit
 
-Пример можно посмотреть в [`submit_example`](https://github.com/sberbank-ai/digital_peter_aij2020/tree/master/submit_example)
+
+You can download the example solution: [`submit_example`](https://github.com/sberbank-ai/digital_peter_aij2020/tree/master/submit_example)
