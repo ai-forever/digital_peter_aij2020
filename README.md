@@ -1,4 +1,4 @@
-# AI Journey 2020 Digital Peter
+# Digital Peter: распознавание рукописей Петра I, AI Journey 2020
 
 The English version of this document is [here](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/README.en.md)
 
