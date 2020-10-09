@@ -1,5 +1,7 @@
 # AI Journey 2020 Digital Peter
 
+The English version of this document is [here]()
+
 Соревнование по распознаванию древних текстов, написанных рукой Петра Великого.
 
 ### Описание задачи и данных
