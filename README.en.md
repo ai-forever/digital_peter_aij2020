@@ -8,7 +8,7 @@ Contestants are invited to create an algorithm for line-by-line recognition of m
 
 A detailed description of the problem (with an immersion in the problem) can be found in [```desc/detailed_description_of_the_task_en.pdf```](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/desc/detailed_description_of_the_task_ru.pdf)
 
-Train dataset can be downloaded [тут](https://storage.yandexcloud.net/datasouls-ods/materials/46b7bb85/datasets.zip).
+Train dataset can be downloaded [here](https://storage.yandexcloud.net/datasouls-ods/materials/46b7bb85/datasets.zip).
 
 There are 2 folders inside: `images` and `words`. The `images` folder contains jpg files with cut lines from Peter the Great's documents, and the `words` folder contains txt files (transcribed versions of jpg files). Mapping is performed by name. 
 
