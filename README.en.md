@@ -133,6 +133,7 @@ Provided resources:
 - 8 CPU cores
 - 94 GB RAM
 - NVidia Tesla V100 GPU
+
 Restrictions:
 - Up to 5 GB size of the working dir
 - Up to 5 GB size of an archive with the solution
