@@ -41,7 +41,7 @@ For text recognition (in baseline), the following architecture is used:
 
 ### Description of the metrics
 
-The leaderboard will take into account the following recognition quality metrics (in the test sample)
+The leaderboard will take into account the following recognition quality metrics (in the test dataset)
 
 * **CER** - Character Error Rate 
 
