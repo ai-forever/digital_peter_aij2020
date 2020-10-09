@@ -6,7 +6,7 @@ Digital Peter is an educational task with a historical slant created on the basi
 
 Contestants are invited to create an algorithm for line-by-line recognition of manuscripts written by Peter the Great.
 
-A detailed description of the problem (with an immersion in the problem) can be found in [```desc/detailed_description_of_the_task_ru.pdf```](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/desc/detailed_description_of_the_task_ru.pdf)
+A detailed description of the problem (with an immersion in the problem) can be found in [```desc/detailed_description_of_the_task_en.pdf```](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/desc/detailed_description_of_the_task_ru.pdf)
 
 Train dataset can be downloaded [тут](https://storage.yandexcloud.net/datasouls-ods/materials/46b7bb85/datasets.zip).
 
