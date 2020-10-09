@@ -102,7 +102,7 @@ String accuracy: 25.000000%
 CER = 10.526%
 WER = 44.432%
 String Accuracy = 21.662%
-Time = 60 sec.
+Time = 60 sec
 ```
 
 ### Формат решения
