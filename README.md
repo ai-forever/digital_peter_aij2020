@@ -111,8 +111,8 @@ Time = 60 sec
 
 ```
 {
-	"image": "<docker image>",
-	"entrypoint": "<entry point or sh script>"
+   "image": "<docker image>",
+   "entrypoint": "<entry point or sh script>"
 }
 ```
 
