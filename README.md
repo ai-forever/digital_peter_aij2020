@@ -1,6 +1,6 @@
-<p align="center">
+[<p align="center">
   <img src="pics/AIJ_Logo.png" width="100%">
-</p>
+</p>](https://ai-journey.ru/contest/task01)
 
 # Digital Peter: распознавание рукописей Петра I
 
