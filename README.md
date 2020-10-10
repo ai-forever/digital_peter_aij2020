@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="pics/AIJ_Logo.png" width="70%">
+  <img src="pics/AIJ_Logo.png" width="100%">
 </p>
 
 # Digital Peter: распознавание рукописей Петра I
