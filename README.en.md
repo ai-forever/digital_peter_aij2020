@@ -29,7 +29,7 @@ the translation (1_1_10.txt):
 ```
 
 File names have the following format `x_y_z`, where `x` is the series number (a series is a set of pages with text), `y` is the page number, and `z` is the line number on this page.
-Absolute values `x`,` y`, `z` do not make any sense (these are internal numbers). Only the sequence `z` is important for fixed `x_y`. For example, in files 
+Absolute values `x`, `y`, `z` do not make any sense (these are internal numbers). Only the sequence `z` is important for fixed `x_y`. For example, in files 
 ```
   987_65_10.jpg
   987_65_11.jpg
@@ -39,7 +39,7 @@ Absolute values `x`,` y`, `z` do not make any sense (these are internal numbers)
 ```
 exactly 5 consecutive lines are found. 
 
-Thus, by choosing certain values of `x` and` y`, it is possible to restore the sequence of lines in a particular document - these will be the numbers `z` in ascending order for fixed `x`, `y`. This fact can be used additionally to improve the quality of recognition.
+Thus, by choosing certain values of `x` and `y`, it is possible to restore the sequence of lines in a particular document - these will be the numbers `z` in ascending order for fixed `x`, `y`. This fact can be used additionally to improve the quality of recognition.
 
 The file names in the test dataset have the same structure.
 
