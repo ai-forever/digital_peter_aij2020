@@ -37,7 +37,9 @@ Absolute values `x`,` y`, `z` do not make any sense (these are internal numbers)
   987_65_13.jpg
   987_65_14.jpg
 ```
-exactly 5 consecutive lines are found. This fact can be used additionally.
+exactly 5 consecutive lines are found. 
+
+Thus, by choosing certain values of `x` and` y`, it is possible to restore the sequence of lines in a particular document - these will be the numbers `z` in ascending order for fixed `x`, `y`. This fact can be used additionally to improve the quality of recognition.
 
 The file names in the test dataset have the same structure.
 
