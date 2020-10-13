@@ -12,7 +12,7 @@ Contestants are invited to create an algorithm for line-by-line recognition of m
 
 A detailed description of the problem (with an immersion in the problem) can be found in [```desc/detailed_description_of_the_task_en.pdf```](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/desc/detailed_description_of_the_task_en.pdf)
 
-Train dataset can be downloaded [here](https://storage.yandexcloud.net/datasouls-ods/materials/46b7bb85/datasets.zip).
+Train dataset can be downloaded [here](https://storage.yandexcloud.net/datasouls-ods/materials/46b7bb85/datasets.zip). This dataset was prepared jointly with a working group consisting of researchers from the Saint Petersburg Institute of History (N.P.Lihachov mansion) of Russian Academy of Sciences - specialists in the history of the Petrine era, as well as paleography and archeography. Federal Archival Agency of Russia and Russian State Archive of Ancient Acts were of great help by providing digital copies of autographs.
 
 There are 2 folders inside: `images` and `words`. The `images` folder contains jpg files with cut lines from Peter the Great's documents, and the `words` folder contains txt files (transcribed versions of jpg files). Mapping is performed by name. 
 
@@ -28,7 +28,20 @@ the translation (1_1_10.txt):
                                   зело многа в гафѣ i непърестано выхо
 ```
 
-This dataset was prepared jointly with a working group consisting of researchers from the Saint Petersburg Institute of History (N.P.Lihachov mansion) of Russian Academy of Sciences - specialists in the history of the Petrine era, as well as paleography and archeography. Federal Archival Agency of Russia and Russian State Archive of Ancient Acts were of great help by providing digital copies of autographs.
+File names have the following format `x_y_z`, where` x` is the series number (a series is a set of pages with text), `y` is the page number, and` z` is the line number on this page.
+Absolute values `x`,` y`, `z` do not make any sense (these are internal numbers). Only the sequence `z` is important for fixed` x_y`. For example, in files 
+```
+  987_65_10.jpg
+  987_65_11.jpg
+  987_65_12.jpg
+  987_65_13.jpg
+  987_65_14.jpg
+```
+exactly 5 consecutive lines are found. This fact can be used additionally.
+
+The file names in the test dataset have the same structure.
+
+The overwhelming majority of the lines were written by the hand of Peter the Great in the period from 1709 to 1713 (there are lines written in 1704, 1707 and 1708, but there are no more than 150 of them; these lines were included in both train dataset and test dataset).
 
 
 ### Baseline
