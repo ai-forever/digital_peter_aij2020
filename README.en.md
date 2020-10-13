@@ -28,8 +28,8 @@ the translation (1_1_10.txt):
                                   зело многа в гафѣ i непърестано выхо
 ```
 
-File names have the following format `x_y_z`, where` x` is the series number (a series is a set of pages with text), `y` is the page number, and` z` is the line number on this page.
-Absolute values `x`,` y`, `z` do not make any sense (these are internal numbers). Only the sequence `z` is important for fixed` x_y`. For example, in files 
+File names have the following format `x_y_z`, where `x` is the series number (a series is a set of pages with text), `y` is the page number, and `z` is the line number on this page.
+Absolute values `x`,` y`, `z` do not make any sense (these are internal numbers). Only the sequence `z` is important for fixed `x_y`. For example, in files 
 ```
   987_65_10.jpg
   987_65_11.jpg
