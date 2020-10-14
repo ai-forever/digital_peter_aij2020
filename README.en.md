@@ -78,10 +78,10 @@ The leaderboard will take into account the following recognition quality metrics
 
 <img src="https://render.githubusercontent.com/render/math?math=\text{dist}_w"> is the Levenshtein distance calculated for word tokens, <img src="https://render.githubusercontent.com/render/math?math=\text{len}_w"> - is the length of the string in words.
 
-* **Sentence Accuracy** - number of fully matching test strings divided by total number of test strings.
+* **String Accuracy** - number of fully matching test strings divided by total number of test strings.
 
 <p align="center">
-  <img src="pics/SentenceAccuracy.png" width="40%">
+  <img src="pics/StringAccuracy.png" width="40%">
 </p>
 
 Here we use Iverson bracket:
@@ -114,7 +114,7 @@ Word error rate: 70.000000%
 String accuracy: 25.000000%
 ```
 
-**CER**, %, is the key metric used to sort the leaderboard (the less the better). If two or more contestants earn the same **CER**, they will be sorted using **WER**, %, (the less the better). If both **CER** and **WER** match, **Sentence Accuracy**, %, will be used (the more the better). Next metric is the **Time**, sec., - execution time for your model to process the test dataset on NVidia Tesla V100 (the less the better). If all the metrics match, then the first will be the solution loaded earlier in time (if everything is the same here, then we will sort alphabetically by command names).
+**CER**, %, is the key metric used to sort the leaderboard (the less the better). If two or more contestants earn the same **CER**, they will be sorted using **WER**, %, (the less the better). If both **CER** and **WER** match, **String Accuracy**, %, will be used (the more the better). Next metric is the **Time**, sec., - execution time for your model to process the test dataset on NVidia Tesla V100 (the less the better). If all the metrics match, then the first will be the solution loaded earlier in time (if everything is the same here, then we will sort alphabetically by command names).
 
 The latest version of the model (see [```baseline.ipynb```](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/baseline.ipynb)) has the following values for quality metrics calculated on the public part of the test sample:
 ```bash
