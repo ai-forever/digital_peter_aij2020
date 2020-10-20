@@ -64,7 +64,7 @@ Train выборку можно скачать [тут](https://storage.yandexcl
 * модель Encoder-Decoder with Bahdanau Attention;
 * модель на основе архитектуры Transformer.
 
-Ноутбук с бейзлайном sequence-to-sequence: ```baseline_seq2seq.ipynb```
+Ноутбук с бейзлайном sequence-to-sequence: [```baseline_seq2seq.ipynb```](https://github.com/sberbank-ai/digital_peter_aij2020/blob/seq2seq/baseline_seq2seq.ipynb)
 
 Данные и модели, использованные в вышеуказанном ноутбуке, можно скачать [тут](https://drive.google.com/file/d/1F8_ZadsdSvrEUTAOLSCd27Nt3MTvj-1N/view?usp=sharing).
 
