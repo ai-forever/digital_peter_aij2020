@@ -4,7 +4,7 @@
 
 # Digital Peter: распознавание рукописей Петра I
 
-The English version of this document is [here](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/README.en.md)
+The English version of this document is [here](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/README.en.md).
 
 Соревнование по распознаванию древних текстов, написанных рукой Петра Великого. Подготовлено совместно с СПбИИ РАН, Росархивом и РГАДА.
 
@@ -59,6 +59,14 @@ Train выборку можно скачать [тут](https://storage.yandexcl
   <img src="pics/ArchitectureNN.jpg" width="60%">
 </p>
 
+Одним из возможных способов улучшения качества системы распознавания рукописных документов является пост-обработка с помощью моделей sequence-to-sequence, например:
+
+* модель Encoder-Decoder with Bahdanau Attention;
+* модель на основе архитектуры Transformer.
+
+Ноутбук с бейзлайном sequence-to-sequence: [```baseline_seq2seq.ipynb```](https://github.com/sberbank-ai/digital_peter_aij2020/blob/seq2seq/baseline_seq2seq.ipynb)
+
+Данные и модели, использованные в вышеуказанном ноутбуке, можно скачать [тут](https://drive.google.com/file/d/1F8_ZadsdSvrEUTAOLSCd27Nt3MTvj-1N/view?usp=sharing).
 
 ### Описание метрик
 

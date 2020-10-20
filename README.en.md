@@ -57,6 +57,13 @@ For text recognition (in baseline), the following architecture is used:
   <img src="pics/ArchitectureNN.jpg" width="60%">
 </p>
 
+One possible way to improve the performance is to apply a sequence-to-sequence model for post-processing, e.g.:
+* Encoder-Decoder with Bahdanau Attention;
+* Transformer-based sequence-to-sequence model.
+
+A jupyter-notebook with the baseline that incorporates the sequence-to-sequence models: [```baseline_seq2seq.ipynb```](https://github.com/sberbank-ai/digital_peter_aij2020/blob/seq2seq/baseline_seq2seq.ipynb)
+
+The data and models are available [here](https://drive.google.com/file/d/1F8_ZadsdSvrEUTAOLSCd27Nt3MTvj-1N/view?usp=sharing).
 
 ### Description of the metrics
 
