@@ -4,8 +4,6 @@
 
 # Digital Peter: распознавание рукописей Петра I
 
-The English version of this document is [here](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/README.en.md).
-
 Соревнование по распознаванию древних текстов, написанных рукой Петра Великого. Подготовлено совместно с СПбИИ РАН, Росархивом и РГАДА.
 
 ### Описание задачи и данных
