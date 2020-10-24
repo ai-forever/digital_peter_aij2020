@@ -4,7 +4,7 @@
 
 # Digital Peter: recognition of Peter the Great's manuscripts
 
-The Russian version of this document is [here](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/README.ru.md).
+Русскую версию документа можно найти [тут](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/README.ru.md).
 
 Digital Peter is an educational task with a historical slant created on the basis of several AI technologies (Computer Vision, NLP, and knowledge graphs). The task was prepared jointly with the Saint Petersburg Institute of History (N.P.Lihachov mansion) of Russian Academy of Sciences, Federal Archival Agency of Russia and Russian State Archive of Ancient Acts.
 
