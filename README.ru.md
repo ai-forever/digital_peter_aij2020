@@ -57,6 +57,15 @@ Train выборку можно скачать [тут](https://storage.yandexcl
   <img src="pics/ArchitectureNN.jpg" width="60%">
 </p>
 
+Одним из возможных способов улучшения качества системы распознавания рукописных документов является пост-обработка с помощью моделей sequence-to-sequence, например:
+
+* модель Encoder-Decoder with Bahdanau Attention;
+* модель на основе архитектуры Transformer.
+
+Ноутбук с бейзлайном sequence-to-sequence: ```baseline_seq2seq.ipynb```
+
+Данные и модели, использованные в вышеуказанном ноутбуке, можно скачать [тут](https://drive.google.com/file/d/1QXCKKZWa0wqIkHzW_OEf1SiPPPP7HtFH/view?usp=sharing).
+
 ### Описание метрик
 
 В лидерборде будут учитываться следующие метрики качества распознавания (на тестовой выборке)
