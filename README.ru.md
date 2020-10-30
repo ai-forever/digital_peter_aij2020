@@ -132,6 +132,20 @@ String Accuracy = 21.662%
 Time = 60 sec
 ```
 
+Последняя версия бейзлайнов (см. [```baseline_seq2seq.ipynb```](https://github.com/sberbank-ai/digital_peter_aij2020/blob/seq2seq/baseline_seq2seq.ipynb)), которые включают пост-обработку с помощью моделей sequence-to-sequence имеют следующие значения метрик качества, полученных на public-части тестовой выборки:
+```bash
+Encoder-Decoder with Bahdanau Attention
+CER = 14.957%
+WER = 49.716%
+String Accuracy = 13.547%
+Time = 359 sec
+
+Transformer-based sequence-to-sequence model
+CER = 14.489%
+WER = 54.974%
+String Accuracy = 9.228%
+Time = 76 sec
+```
 ### Формат решения
 
 В качестве решений принимается алгоритм (код + необходимые файлы) и описание точки запуска в виде одного архива. В корне архива с решением должен лежать файл `metadata.json` со структурой:
