@@ -109,7 +109,7 @@ def load_test_images(test_image_dir):
     test_images = []
     names_test = []
     for name in os.listdir(test_image_dir):
-        img = cv2.imread(test_image_dir + '/' + name)
+        img = cv2.imread(test_image_dir + '/' + name, cv2.IMREAD_GRAYSCALE)
         img = process_image(img)
         test_images.append(img)
         names_test.append(name)

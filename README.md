@@ -133,6 +133,7 @@ String Accuracy = 21.662%
 Time = 60 sec
 ```
 
+The latest version of the baseline (see [```baseline_seq2seq```])
 ### Solution format
 
 The accepted solution is ZIP archive, which contains the algorithm (your code) and the entrypoint to run it. The entrypoint should be set in `metadata.json` file in the root of your solution archive:
