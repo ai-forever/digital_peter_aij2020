@@ -59,6 +59,14 @@ For text recognition (in baseline), the following architecture is used:
   <img src="pics/ArchitectureNN.jpg" width="60%">
 </p>
 
+One possible way to improve the performance is to apply a sequence-to-sequence model for post-processing, e.g.:
+* Encoder-Decoder with Bahdanau Attention;
+* Transformer-based sequence-to-sequence model.
+
+A jupyter-notebook with the baseline that incorporates the sequence-to-sequence models: [```baseline_seq2seq.ipynb```](https://github.com/sberbank-ai/digital_peter_aij2020/blob/seq2seq/baseline_seq2seq.ipynb)
+
+The data and models are available [here](https://drive.google.com/file/d/1QXCKKZWa0wqIkHzW_OEf1SiPPPP7HtFH/view?usp=sharing).
+
 ### Description of the metrics
 
 The leaderboard will take into account the following recognition quality metrics (in the test dataset)
@@ -123,6 +131,21 @@ CER = 10.526%
 WER = 44.432%
 String Accuracy = 21.662%
 Time = 60 sec
+```
+
+The latest version of the baseline (see [```baseline_seq2seq.ipynb```](https://github.com/sberbank-ai/digital_peter_aij2020/blob/seq2seq/baseline_seq2seq.ipynb)) achieved the following metrics on the public part of the test sample:
+```bash
+Encoder-Decoder with Bahdanau Attention
+CER = 14.957%
+WER = 49.716%
+String Accuracy = 13.547%
+Time = 359 sec
+
+Transformer-based sequence-to-sequence model
+CER = 14.489%
+WER = 54.974%
+String Accuracy = 9.228%
+Time = 76 sec
 ```
 
 ### Solution format
