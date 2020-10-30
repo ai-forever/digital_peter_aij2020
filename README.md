@@ -133,7 +133,21 @@ String Accuracy = 21.662%
 Time = 60 sec
 ```
 
-The latest version of the baseline (see [```baseline_seq2seq```])
+The latest version of the baseline (see [```baseline_seq2seq.ipynb```](https://github.com/sberbank-ai/digital_peter_aij2020/blob/seq2seq/baseline_seq2seq.ipynb)) achieved the following metrics on the public part of the test sample:
+```bash
+Encoder-Decoder with Bahdanau Attention
+CER = 14.957%
+WER = 49.716%
+String Accuracy = 13.547%
+Time = 359 sec
+
+Transformer-based sequence-to-sequence model
+CER = 14.489%
+WER = 54.974%
+String Accuracy = 9.228%
+Time = 76 sec
+```
+
 ### Solution format
 
 The accepted solution is ZIP archive, which contains the algorithm (your code) and the entrypoint to run it. The entrypoint should be set in `metadata.json` file in the root of your solution archive:
