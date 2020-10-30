@@ -63,7 +63,7 @@ One possible way to improve the performance is to apply a sequence-to-sequence m
 * Encoder-Decoder with Bahdanau Attention;
 * Transformer-based sequence-to-sequence model.
 
-A jupyter-notebook with the baseline that incorporates the sequence-to-sequence models: ```baseline_seq2seq.ipynb```
+A jupyter-notebook with the baseline that incorporates the sequence-to-sequence models: [```baseline_seq2seq.ipynb```](https://github.com/sberbank-ai/digital_peter_aij2020/blob/seq2seq/baseline_seq2seq.ipynb)
 
 The data and models are available [here](https://drive.google.com/file/d/1QXCKKZWa0wqIkHzW_OEf1SiPPPP7HtFH/view?usp=sharing).
 
