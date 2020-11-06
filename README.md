@@ -155,7 +155,7 @@ The accepted solution is ZIP archive, which contains the algorithm (your code) a
 ```
 {
    "image": "<docker image>",
-   "entrypoint": "<entry point or sh script>"
+   "entry_point": "<entry point or sh script>"
 }
 ```
 
