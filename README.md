@@ -163,7 +163,7 @@ For example:
 ```
 {
    "image": "odsai/python-gpu",
-   "entrypoint": "python predict.py"
+   "entry_point": "python predict.py"
 }
 ```
 
