@@ -153,7 +153,7 @@ Time = 76 sec
 ```
 {
    "image": "<docker image>",
-   "entrypoint": "<entry point or sh script>"
+   "entry_point": "<entry point or sh script>"
 }
 ```
 
@@ -161,7 +161,7 @@ Time = 76 sec
 ```
 {
    "image": "odsai/python-gpu",
-   "entrypoint": "python predict.py"
+   "entry_point": "python predict.py"
 }
 ```
 
