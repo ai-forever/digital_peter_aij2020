@@ -181,3 +181,5 @@ Time = 76 sec
 - 10 минут на работу решения
 
 Пример можно посмотреть в [`submit_example`](https://github.com/sberbank-ai/digital_peter_aij2020/tree/master/submit_example)
+
+[Здесь](https://drive.google.com/file/d/16qXYiferc8WAja_3FUbLsG3zwpmmKZBM/view?usp=sharing) можно найти содержимое Docker контейнера в формате ```.zip``` для бейзлайнового решения, которое включает в себя пост-обрабокту с помощью модели sequence-to-sequence на основе архитектуры transformer.
