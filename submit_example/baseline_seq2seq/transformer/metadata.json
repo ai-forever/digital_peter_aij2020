@@ -1,4 +1,4 @@
 {
-  "image": "odsai/python-gpu",
+  "image": "17686000/cds_seq2seq_baseline_transformer",
   "entry_point": "python run_eval_transformer.py"
 }
