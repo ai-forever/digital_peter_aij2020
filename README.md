@@ -184,3 +184,5 @@ Restrictions:
 
 
 You can download the example solution: [`submit_example`](https://github.com/sberbank-ai/digital_peter_aij2020/tree/master/submit_example)
+
+[Here](https://drive.google.com/file/d/16qXYiferc8WAja_3FUbLsG3zwpmmKZBM/view?usp=sharing) is the ```.zip``` file to build a Docker container from (```Transformer-based sequence-to-sequence model```). 
