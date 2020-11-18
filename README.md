@@ -30,7 +30,7 @@ Similar fixes have been made to test_public and test_private.
 
 Statistics (test_public):
 ```bash
-Percentage of corrected files = 1.57%%
+Percentage of corrected files = 1.57%
 ```
 
 ## MAIN DESCRIPTION
