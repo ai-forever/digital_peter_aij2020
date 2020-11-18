@@ -18,8 +18,9 @@ python checker_train.py 'train/words'
 Here [```checker_train.py```](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/fix/checker_train.py) is the script that makes corrections
 of the ```'train/words'``` - the folder with old versions of transcribed strings.
 
-Full list of corrected files' names can be found [here](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/fix/correction_info.txt)
-Statistics:
+A complete list of the names of the fixed files as well as info about these corrections can be found [here](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/fix/correction_info.txt)
+
+Statistics (train dataset):
 ```bash
 Number of corrected files = 81
 Total number of files = 6196
