@@ -9,7 +9,7 @@
 
 ## INFO ABOUT DATASETS CORRECTION 
 
-**Fixed** train dataset can be downloaded [here](https://drive.google.com/file/d/1E9yDuy98k35C4RPikwBCuasv1H5JKKua/view?usp=sharing)
+**Fixed** train dataset can be downloaded [here](https://drive.google.com/file/d/1E9yDuy98k35C4RPikwBCuasv1H5JKKua/view?usp=sharing).
 
 Moreover, one can fix the **old** version of train dataset (which can still be found [here](https://storage.yandexcloud.net/datasouls-ods/materials/46b7bb85/datasets.zip)) by yourself using following command:
 ```bash
@@ -18,7 +18,7 @@ python checker_train.py 'train/words'
 Here [```checker_train.py```](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/fix/checker_train.py) is the script that makes corrections
 of the ```'train/words'``` - the folder with old versions of transcribed strings.
 
-A complete list of the names of the fixed files as well as info about these corrections can be found [here](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/fix/correction_info.txt)
+A complete list of the names of the fixed files (as well as info about these corrections) can be found [here](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/fix/correction_info.txt) and inside the [```checker_train.py```](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/fix/checker_train.py).
 
 Statistics (train dataset):
 ```bash
