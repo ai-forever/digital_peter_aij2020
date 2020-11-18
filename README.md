@@ -29,8 +29,10 @@ Percentage of corrected files = 1.31%
 
 Similar fixes have been made to **test_public** and **test_private**.
 
-Statistics (**test_public**):
+Statistics (**test_public** dataset):
 ```bash
+Number of corrected files = 24
+Total number of files = 1528
 Percentage of corrected files = 1.57%
 ```
 
