@@ -15,10 +15,10 @@ Moreover, one can fix the **old** version of train dataset (which can still be f
 ```bash
 python checker_train.py 'train/words'
 ```
-Here [```checker_train.py```](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/fix/checker_train.py) is the script that makes corrections
+Here [```checker_train.py```](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/fixes/checker_train.py) is the script that makes corrections
 of the ```'train/words'``` - the folder with old versions of transcribed strings.
 
-A complete list of the names of the fixed files (as well as info about these corrections) can be found [here](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/fix/correction_info.txt) and inside the [```checker_train.py```](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/fix/checker_train.py).
+A complete list of the names of the fixed files (as well as info about these corrections) can be found [here](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/fixes/correction_info.txt) and inside the [```checker_train.py```](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/fixes/checker_train.py).
 
 Statistics (train dataset):
 ```bash
