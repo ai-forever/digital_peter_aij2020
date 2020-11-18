@@ -9,6 +9,32 @@
 
 ## INFO ABOUT DATASETS CORRECTION 
 
+Fixed train dataset can be downloaded [here](https://drive.google.com/file/d/1E9yDuy98k35C4RPikwBCuasv1H5JKKua/view?usp=sharing)
+
+Moreover, one can fix the old version of [train](https://storage.yandexcloud.net/datasouls-ods/materials/46b7bb85/datasets.zip) using following command:
+```bash
+python checker_train.py 'train/words'
+```
+Here [```checker_train.py```](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/fix/checker_train.py) is the script that makes corrections
+of the ```'train/words'``` - the folder with old versions of transcribed strings.
+
+Full list of corrected files' names can be found [here](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/fix/correction_info.txt)
+Statistics:
+```bash
+Number of corrected files = 81
+Total number of files = 6196
+Percentage of corrected files = 1.31%
+```
+
+Similar fixes have been made to test_public and test_private.
+
+Statistics (test_public):
+```bash
+Percentage of corrected files = 1.57%%
+```
+
+## MAIN DESCRIPTION
+
 Digital Peter is an educational task with a historical slant created on the basis of several AI technologies (Computer Vision, NLP, and knowledge graphs). The task was prepared jointly with the Saint Petersburg Institute of History (N.P.Lihachov mansion) of Russian Academy of Sciences, Federal Archival Agency of Russia and Russian State Archive of Ancient Acts.
 
 ### Description of the task and data
@@ -17,7 +43,7 @@ Contestants are invited to create an algorithm for line-by-line recognition of m
 
 A detailed description of the problem (with an immersion in the problem) can be found in [```desc/detailed_description_of_the_task_en.pdf```](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/desc/detailed_description_of_the_task_en.pdf)
 
-Train dataset can be downloaded [here](https://storage.yandexcloud.net/datasouls-ods/materials/46b7bb85/datasets.zip). This dataset was prepared jointly with a working group consisting of researchers from the Saint Petersburg Institute of History (N.P.Lihachov mansion) of Russian Academy of Sciences - specialists in the history of the Petrine era, as well as paleography and archeography. Federal Archival Agency of Russia and Russian State Archive of Ancient Acts were of great help by providing digital copies of autographs.
+**OLD** train dataset can be downloaded [here](https://storage.yandexcloud.net/datasouls-ods/materials/46b7bb85/datasets.zip). This dataset was prepared jointly with a working group consisting of researchers from the Saint Petersburg Institute of History (N.P.Lihachov mansion) of Russian Academy of Sciences - specialists in the history of the Petrine era, as well as paleography and archeography. Federal Archival Agency of Russia and Russian State Archive of Ancient Acts were of great help by providing digital copies of autographs.
 
 There are 2 folders inside: `images` and `words`. The `images` folder contains jpg files with cut lines from Peter the Great's documents, and the `words` folder contains txt files (transcribed versions of jpg files). Mapping is performed by name. 
 
