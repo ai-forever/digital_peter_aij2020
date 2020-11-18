@@ -20,16 +20,16 @@ of the ```'train/words'``` - the folder with old versions of transcribed strings
 
 A complete list of the names of the fixed files (as well as info about these corrections) can be found [here](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/fixes/correction_info.txt) and inside the [```checker_train.py```](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/fixes/checker_train.py).
 
-Statistics (train dataset):
+Statistics (**train** dataset):
 ```bash
 Number of corrected files = 81
 Total number of files = 6196
 Percentage of corrected files = 1.31%
 ```
 
-Similar fixes have been made to test_public and test_private.
+Similar fixes have been made to **test_public** and **test_private**.
 
-Statistics (test_public):
+Statistics (**test_public**):
 ```bash
 Percentage of corrected files = 1.57%
 ```
