@@ -5,7 +5,7 @@
 # Digital Петр: распознавание рукописей Петра I
 
 
-## ИНФОРМАЦИЯ ПО ФИКСУ ВЫБОРКИ
+## ИНФОРМАЦИЯ ПО ФИКСУ ВЫБОРОК
 
 **Исправленный** train можно скачать [тут](https://drive.google.com/file/d/1E9yDuy98k35C4RPikwBCuasv1H5JKKua/view?usp=sharing).
 
@@ -13,10 +13,10 @@
 ```bash
 python checker_train.py 'train/words'
 ```
-Здесь [```checker_train.py```](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/fixes/checker_train.py) - скрипт, который
-перезаписывает все необходимые файлы в ```'train/words'``` (папке, которая содрежит старые версии транскрибированных строк).
+Тут [```checker_train.py```](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/fixes/checker_train.py) - скрипт, который
+перезаписывает все требующие исправлений файлы в ```'train/words'``` (папке, которая содрежит старые версии транскрибированных строк).
 
-Полный список названий исправленных файлов (как и информацию о том, что было исправлено) можно найти [здесь](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/fixes/correction_info.txt). Кроме того, более подробную информацию о сути изменений моожно найти в скрипте [```checker_train.py```](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/fixes/checker_train.py).
+Полный список названий исправленных файлов (как и информацию о том, что было исправлено) можно найти [здесь](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/fixes/correction_info.txt). Кроме того, более подробную информацию о сути изменений можно найти в скрипте [```checker_train.py```](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/fixes/checker_train.py).
 
 Статистика (по исправлениям в **train** датасете):
 ```bash
