@@ -9,7 +9,7 @@
 
 **Исправленный** train можно скачать [тут](https://drive.google.com/file/d/1E9yDuy98k35C4RPikwBCuasv1H5JKKua/view?usp=sharing).
 
-Более того, можно самостоятельно исправить **старую** версию train датасета (который можно найти вот [тут](https://storage.yandexcloud.net/datasouls-ods/materials/46b7bb85/datasets.zip), выполнив следующую команду:
+Более того, можно самостоятельно исправить **старую** версию train датасета (который можно найти вот [тут](https://storage.yandexcloud.net/datasouls-ods/materials/46b7bb85/datasets.zip)), выполнив следующую команду:
 ```bash
 python checker_train.py 'train/words'
 ```
