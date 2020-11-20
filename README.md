@@ -22,9 +22,9 @@ A complete list of the names of the fixed files (as well as info about these cor
 
 Statistics (**train** dataset):
 ```bash
-Number of corrected files = 81
+Number of corrected files = 91
 Total number of files = 6196
-Percentage of corrected files = 1.31%
+Percentage of corrected files = 1.47%
 ```
 
 Similar fixes have been made to **test_public** and **test_private**.
