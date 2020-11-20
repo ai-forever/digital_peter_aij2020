@@ -20,9 +20,9 @@ python checker_train.py 'train/words'
 
 Статистика (по исправлениям в **train** датасете):
 ```bash
-Number of corrected files = 91
-Total number of files = 6196
-Percentage of corrected files = 1.47%
+Количество исправленных файлов = 91
+Общее количество файлов = 6196
+Процент исправлений (в строках) = 1.47%
 ```
 
 Похожие фиксы были применены к датасетам **test_public** и **test_private**.
