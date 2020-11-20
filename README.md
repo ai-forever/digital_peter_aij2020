@@ -36,9 +36,9 @@ Total number of files = 1527
 Percentage of corrected files = 1.57%
 ```
 
-Actually, the public leaderboard **will not be recalculated** on the fixed **test_public** in view of the insignificance of the fixes and the proximity of the end of the competition
+Actually, the public leaderboard **will not be recalculated** on the corrected **test_public** in view of the insignificance of the fixes and the proximity of the end of the competition
 
-Oppositely, we will calculate private leaderbord on corrected **test_private**.
+Oppositely, we will calculate private leaderbord on the corrected **test_private**.
 
 ## MAIN DESCRIPTION
 
