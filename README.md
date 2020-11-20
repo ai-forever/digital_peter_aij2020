@@ -18,7 +18,7 @@ python checker_train.py 'train/words'
 Here [```checker_train.py```](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/fixes/checker_train.py) is the script that makes corrections
 of the ```'train/words'``` - the folder with old versions of transcribed strings.
 
-A complete list of the names of the fixed files (as well as info about these corrections) can be found [here](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/fixes/correction_info.txt) and inside the [```checker_train.py```](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/fixes/checker_train.py).
+A complete list of the names of the fixed files (as well as info about these corrections) can be found [here](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/fixes/correction_info.txt) and inside the [```checker_train.py```](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/fixes/checker_train.py)
 
 Statistics (**train** dataset):
 ```bash
@@ -36,7 +36,7 @@ Total number of files = 1527
 Percentage of corrected files = 1.57%
 ```
 
-Actually, the public leaderboard **will not be recalculated** on the corrected **test_public** in view of the insignificance of the fixes and the proximity of the end of the competition
+Actually, the public leaderboard **will not be recalculated** on the corrected **test_public** in view of the insignificance of the fixes and the proximity of the end of the competition.
 
 Oppositely, we will calculate private leaderbord on the corrected **test_private**.
 
