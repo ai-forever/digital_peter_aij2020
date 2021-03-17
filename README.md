@@ -225,7 +225,7 @@ You can download the example solution: [`submit_example`](https://github.com/sbe
 
 ### Leaderboard
 
-The competition is over. Here is the final leaderboard for this competition. Scores are presented for the private set. Baseline solution presented in this github has the following metrics - 9,786 44,222 21,532 (CER,WER,ACC).
+The competition is over. Here is the final leaderboard for this competition. Scores are presented for the private set. Baseline solution presented in this github has the following metrics - 9.786, 44.222, 21.532 (CER,WER,ACC).
 
 <p align="center">
   <img src="pics/leaderboard.png" width="70%">
