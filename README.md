@@ -222,3 +222,11 @@ Restrictions:
 You can download the example solution: [`submit_example`](https://github.com/sberbank-ai/digital_peter_aij2020/tree/master/submit_example)
 
 [Here](https://drive.google.com/file/d/16qXYiferc8WAja_3FUbLsG3zwpmmKZBM/view?usp=sharing) is the ```.zip``` file to build a Docker container from the baseline solution that incorporates the transformer-based sequence-to-sequence model. 
+
+### Leaderboard
+
+The competition is over. Here is the final leaderboard for this competition. Scores are presented for the private set. Baseline solution presented in this github has the following metrics - 9,786 44,222 21,532 (CER,WER,ACC).
+
+<p align="center">
+  <img src="pics/leaderboard.png" width="70%">
+</p>
