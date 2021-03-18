@@ -5,6 +5,11 @@
 # Digital Петр: распознавание рукописей Петра I
 
 
+# Печатная версия статьи
+
+Доступна тут http://arxiv.org/abs/2103.09354
+
+
 ## ИНФОРМАЦИЯ ПО ФИКСУ ВЫБОРОК
 
 **Исправленный** train можно скачать [тут](https://drive.google.com/file/d/1Qki21iEcg_iwMo3kWuaHi5AlxxpLKpof/view?usp=sharing).
