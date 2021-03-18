@@ -2,14 +2,13 @@
   <img src="pics/AIJ_Logo.png" width="100%">
 </p>
 
-# Preprinted version of the paper 
-
-Is available at http://arxiv.org/abs/2103.09354 
-
 # Digital Peter: recognition of Peter the Great's manuscripts
 
 Русскую версию документа можно найти [тут](https://github.com/sberbank-ai/digital_peter_aij2020/blob/master/README.ru.md).
 
+# Preprinted version of the paper 
+
+Is available at http://arxiv.org/abs/2103.09354 
 
 ## INFO ABOUT DATASETS CORRECTION 
 
