@@ -2,7 +2,9 @@
   <img src="pics/AIJ_Logo.png" width="100%">
 </p>
 
-Preprinted version of the paper is available at http://arxiv.org/abs/2103.09354 
+# Preprinted version of the paper 
+
+Is available at http://arxiv.org/abs/2103.09354 
 
 # Digital Peter: recognition of Peter the Great's manuscripts
 
